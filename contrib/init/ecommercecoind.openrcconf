@@ -1,0 +1,33 @@
+# /etc/conf.d/ecommercecoind: config file for /etc/init.d/ecommercecoind
+
+# Config file location
+#ECOMMERCECOIND_CONFIGFILE="/etc/ecommercecoin/ecommercecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $ECOMMERCECOIND_USER)
+#ECOMMERCECOIND_PIDDIR="/var/run/ecommercecoind"
+
+# What filename to give the pidfile
+#ECOMMERCECOIND_PIDFILE="${ECOMMERCECOIND_PIDDIR}/ecommercecoind.pid"
+
+# Where to write ecommercecoind data (be mindful that the blockchain is large)
+#ECOMMERCECOIND_DATADIR="/var/lib/ecommercecoind"
+
+# User and group to own ecommercecoind process
+#ECOMMERCECOIND_USER="ecommercecoin"
+#ECOMMERCECOIND_GROUP="ecommercecoin"
+
+# Path to ecommercecoind executable
+#ECOMMERCECOIND_BIN="/usr/bin/ecommercecoind"
+
+# Nice value to run ecommercecoind under
+#ECOMMERCECOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#ECOMMERCECOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for ecommercecoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+ECOMMERCECOIND_SIGTERM_TIMEOUT=60
